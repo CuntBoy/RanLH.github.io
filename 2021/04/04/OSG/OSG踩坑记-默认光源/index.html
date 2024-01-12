@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">28</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">55</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">30</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">57</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -159,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -170,7 +170,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -284,7 +284,7 @@
 </p>
 <span id="more"></span>
 <h3 id="osg-viewer默认光源">OSG-Viewer默认光源</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">osg::Node-&gt;getOrCreateStateSet()-&gt;setMode(GL_RESCALE_NORMAL, osg::StateAttribute::ON);    <span class="comment">// 法线随着模型大小变化而变化。</span></span><br><span class="line">osg::Node-&gt;getOrCreateStateSet()-&gt;setMode(GL_LIGHTING, osg::StateAttribute::OFF | osg::StateAttribute::OVERRIDE); <span class="comment">// 关闭节点光源 并遵从父节点的光照设置</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">osg::Node-&gt;<span class="built_in">getOrCreateStateSet</span>()-&gt;<span class="built_in">setMode</span>(GL_RESCALE_NORMAL, osg::StateAttribute::ON);    <span class="comment">// 法线随着模型大小变化而变化。</span></span><br><span class="line">osg::Node-&gt;<span class="built_in">getOrCreateStateSet</span>()-&gt;<span class="built_in">setMode</span>(GL_LIGHTING, osg::StateAttribute::OFF | osg::StateAttribute::OVERRIDE); <span class="comment">// 关闭节点光源 并遵从父节点的光照设置</span></span><br></pre></td></tr></table></figure>
 <hr />
 <h5
 id="不指定法向----仍然可以看到-光照效果-但是无法看到明暗变化"><code>不指定法向</code>
@@ -303,7 +303,7 @@ class="math display">\[
 F = \frac{1}{(k_c + k_l*d + k_q*d^2)}
 \]</span></p>
 </blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 获取缺省的光照</span></span><br><span class="line">osg::Light *light = viewer-&gt;getLight(); <span class="comment">// 从当前的查看器 获取光照设置 </span></span><br><span class="line">light-&gt;setAmbient(osg::Vec4(<span class="number">0.4</span>, <span class="number">0.4</span>, <span class="number">0.4</span>, <span class="number">1.0</span>));   <span class="comment">// 环境光   OPENGL的默认值是 osg::Vec3(0.2,0.2,0.2);</span></span><br><span class="line">light-&gt;setDiffuse(osg::Vec4(<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">1.0</span>));   <span class="comment">// 漫反射   直接来源于光源</span></span><br><span class="line">light-&gt;setSpecular(osg::Vec4(<span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">1.0</span>));  <span class="comment">// specular   高光 此处给的很低  </span></span><br><span class="line"><span class="comment">// 由于此处我们使用的是平行光</span></span><br><span class="line"><span class="function">osg::Vec4 <span class="title">lightpos</span><span class="params">(x, y, z, <span class="number">0.0f</span>)</span></span>;   <span class="comment">// 记住: 平行光的位置的最后一个分量必须是 0 </span></span><br><span class="line">light-&gt;setPosition(lightpos);        <span class="comment">// 设置光照位置 </span></span><br><span class="line"><span class="comment">// 光照方向设置</span></span><br><span class="line"><span class="comment">// 需要用到高度角和方位角 -- 计算一个你需要方向 </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置光的衰减 -- 只设置 常量衰减的话 --   无距离衰减</span></span><br><span class="line">light-&gt;setConstantAttenuation(<span class="number">1.0f</span>);</span><br><span class="line">light-&gt;setLinearAttenuation(<span class="number">0.0f</span>);</span><br><span class="line">light-&gt;setQuadraticAttenuation(<span class="number">0.f</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 获取缺省的光照</span></span><br><span class="line">osg::Light *light = viewer-&gt;<span class="built_in">getLight</span>(); <span class="comment">// 从当前的查看器 获取光照设置 </span></span><br><span class="line">light-&gt;<span class="built_in">setAmbient</span>(osg::<span class="built_in">Vec4</span>(<span class="number">0.4</span>, <span class="number">0.4</span>, <span class="number">0.4</span>, <span class="number">1.0</span>));   <span class="comment">// 环境光   OPENGL的默认值是 osg::Vec3(0.2,0.2,0.2);</span></span><br><span class="line">light-&gt;<span class="built_in">setDiffuse</span>(osg::<span class="built_in">Vec4</span>(<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">1.0</span>));   <span class="comment">// 漫反射   直接来源于光源</span></span><br><span class="line">light-&gt;<span class="built_in">setSpecular</span>(osg::<span class="built_in">Vec4</span>(<span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">1.0</span>));  <span class="comment">// specular   高光 此处给的很低  </span></span><br><span class="line"><span class="comment">// 由于此处我们使用的是平行光</span></span><br><span class="line"><span class="function">osg::Vec4 <span class="title">lightpos</span><span class="params">(x, y, z, <span class="number">0.0f</span>)</span></span>;   <span class="comment">// 记住: 平行光的位置的最后一个分量必须是 0 </span></span><br><span class="line">light-&gt;<span class="built_in">setPosition</span>(lightpos);        <span class="comment">// 设置光照位置 </span></span><br><span class="line"><span class="comment">// 光照方向设置</span></span><br><span class="line"><span class="comment">// 需要用到高度角和方位角 -- 计算一个你需要方向 </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置光的衰减 -- 只设置 常量衰减的话 --   无距离衰减</span></span><br><span class="line">light-&gt;<span class="built_in">setConstantAttenuation</span>(<span class="number">1.0f</span>);</span><br><span class="line">light-&gt;<span class="built_in">setLinearAttenuation</span>(<span class="number">0.0f</span>);</span><br><span class="line">light-&gt;<span class="built_in">setQuadraticAttenuation</span>(<span class="number">0.f</span>);</span><br></pre></td></tr></table></figure>
 <p><font color=red> 产生平行光，位置分量的第四分量必须是0 </font></p>
 <h4 id="对节点设置好材料属性">2、对节点设置好材料属性</h4>
 <ul>
@@ -392,8 +392,6 @@ F = \frac{1}{(k_c + k_l*d + k_q*d^2)}
       <i class="fa fa-heart"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">RanBun</span>
-  </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>

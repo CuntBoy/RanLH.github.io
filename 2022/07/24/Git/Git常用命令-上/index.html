@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">28</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">55</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">30</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">57</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -167,7 +167,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -280,12 +280,12 @@
 <h3 id="常用命令">常用命令</h3>
 <ul>
 <li><p>安装完成Git之后的操作 - 指定UserName &amp; Email</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name  &quot;Your Git UserName&quot;</span><br><span class="line">git config --global user.email &quot;Your Email Address&quot;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name  &quot;Your Git UserName&quot;</span><br><span class="line">git config --global user.email &quot;Your Email Address&quot;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>一般时候在你安装完成之后需要做一下这个的配置。</li>
 </ul></li>
 <li><p>生成密钥</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen.exe -t rsa</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen.exe -t rsa</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><p>命令提示 <img
 src="https://raw.githubusercontent.com/Ranbun/images/main/blog/git/ssh-genkey.png"
@@ -293,24 +293,24 @@ alt="Image" /></p></li>
 <li><p>然后将你的公钥添加为你所使用的远程管理平台对应SSH Key</p></li>
 </ul></li>
 <li><p>创建本地版本库</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir repositoryDir  &#x2F;&#x2F; 创建本地文件夹</span><br><span class="line">cd    repositoryDir  &#x2F;&#x2F; 进入到文件夹</span><br><span class="line">git   init           &#x2F;&#x2F; 初始化为本地仓库 创建.git目录</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir repositoryDir  // 创建本地文件夹</span><br><span class="line">cd    repositoryDir  // 进入到文件夹</span><br><span class="line">git   init           // 初始化为本地仓库 创建.git目录</span><br></pre></td></tr></table></figure></p></li>
 <li><p>添加文件到本地暂存区&amp;提交文件到本地</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add &quot;fileName&quot;       &#x2F;&#x2F; 提交具体的文件 </span><br><span class="line">git add .                &#x2F;&#x2F; 提交所有修改文件</span><br><span class="line">git commit -m  &quot;备注信息&quot; &#x2F;&#x2F; 提交暂存区文件到本地</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add &quot;fileName&quot;       // 提交具体的文件 </span><br><span class="line">git add .                // 提交所有修改文件</span><br><span class="line">git commit -m  &quot;备注信息&quot; // 提交暂存区文件到本地</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><code>git commit</code> 命令详解 <img
 src="https://raw.githubusercontent.com/Ranbun/images/main/blog/git/git-commit.png"
 alt="git commit" /></li>
 </ul></li>
 <li><p>版本控制</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git log                      &#x2F;&#x2F;查看提交历史记录，从最近到最远，可以看到3次</span><br><span class="line">git log --pretty&#x3D;oneline     &#x2F;&#x2F;加参数，简洁查看</span><br><span class="line">git reflog                   &#x2F;&#x2F;查看每一次修改历史</span><br><span class="line">cat &quot;fileName&quot;                &#x2F;&#x2F;查看文件内容 -- linux 命令</span><br><span class="line">git status                   &#x2F;&#x2F;查看工作区中文件当前状态</span><br><span class="line">git reset --hard HEAD^(HEAD~100)(commit_id)  &#x2F;&#x2F;回退版本</span><br><span class="line">git checkout -- &quot;fileName&quot;         &#x2F;&#x2F;丢弃工作区的修改，即撤销修改</span><br><span class="line">git reset HEAD &quot;fileName&quot;          &#x2F;&#x2F;丢弃暂存区的修改（若已提交，则回退）</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git log                      //查看提交历史记录，从最近到最远，可以看到3次</span><br><span class="line">git log --pretty=oneline     //加参数，简洁查看</span><br><span class="line">git reflog                   //查看每一次修改历史</span><br><span class="line">cat &quot;fileName&quot;                //查看文件内容 -- linux 命令</span><br><span class="line">git status                   //查看工作区中文件当前状态</span><br><span class="line">git reset --hard HEAD^(HEAD~100)(commit_id)  //回退版本</span><br><span class="line">git checkout -- &quot;fileName&quot;         //丢弃工作区的修改，即撤销修改</span><br><span class="line">git reset HEAD &quot;fileName&quot;          //丢弃暂存区的修改（若已提交，则回退）</span><br></pre></td></tr></table></figure></p></li>
 <li><p>删除文件</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rm &quot;filename&quot;   &#x2F;&#x2F; 删除单个文件 </span><br><span class="line">rm -rf *.*      &#x2F;&#x2F; 强制递归删除所有文件</span><br><span class="line">git rm &quot;filename&quot;  &#x2F;&#x2F; 直接删除</span><br><span class="line">&#x2F;&#x2F; 恢复删除的文件</span><br><span class="line">git checkout -- &quot;filename&quot;</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rm &quot;filename&quot;   // 删除单个文件 </span><br><span class="line">rm -rf *.*      // 强制递归删除所有文件</span><br><span class="line">git rm &quot;filename&quot;  // 直接删除</span><br><span class="line">// 恢复删除的文件</span><br><span class="line">git checkout -- &quot;filename&quot;</span><br></pre></td></tr></table></figure></p></li>
 <li><p>推送到远程的相关命令</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;前面设置的Email&quot;     &#x2F;&#x2F;创建SSH Key 也可以不指定-C与邮件地址</span><br><span class="line">git remote add origin &quot;git的远程仓库地址&quot;  &#x2F;&#x2F;关联远程仓库-源</span><br><span class="line">git push -u origin main                  &#x2F;&#x2F;将本地内容推送到远程-第一次强制推送</span><br><span class="line">git push origin main                     &#x2F;&#x2F;将本地内容推送到远程</span><br><span class="line">git remote -v                            &#x2F;&#x2F;查看远程源信息</span><br><span class="line">git remote rm origin                     &#x2F;&#x2F;删除远程源</span><br><span class="line">git clone &quot;远程仓库地址可以是https的也可以是SSH(此时需要配置密钥)&quot;  &#x2F;&#x2F;克隆远程仓库</span><br><span class="line">git remote                               &#x2F;&#x2F;查看远程库的信息</span><br><span class="line">git remote -v                            &#x2F;&#x2F;查看远程库的详细信</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;前面设置的Email&quot;     //创建SSH Key 也可以不指定-C与邮件地址</span><br><span class="line">git remote add origin &quot;git的远程仓库地址&quot;  //关联远程仓库-源</span><br><span class="line">git push -u origin main                  //将本地内容推送到远程-第一次强制推送</span><br><span class="line">git push origin main                     //将本地内容推送到远程</span><br><span class="line">git remote -v                            //查看远程源信息</span><br><span class="line">git remote rm origin                     //删除远程源</span><br><span class="line">git clone &quot;远程仓库地址可以是https的也可以是SSH(此时需要配置密钥)&quot;  //克隆远程仓库</span><br><span class="line">git remote                               //查看远程库的信息</span><br><span class="line">git remote -v                            //查看远程库的详细信</span><br></pre></td></tr></table></figure></p></li>
 <li><p>分支管理</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 老版本的 git命令 </span><br><span class="line">git checkout -b main        &#x2F;&#x2F;创建并切换到分支dev</span><br><span class="line">&#x3D;&#x3D; 如下操作</span><br><span class="line">git branch   feature        &#x2F;&#x2F;创建分支main</span><br><span class="line">git checkout feature        &#x2F;&#x2F;切换到分支feature</span><br><span class="line">git checkout branchName origin&#x2F;main    &#x2F;&#x2F;拉取远程分支并切换,此时branchName分支对应得远程分支是main</span><br><span class="line">&#x2F;&#x2F; 版本比较新一定的分支管理命令 </span><br><span class="line">git switch -c feature       &#x2F;&#x2F;创建分支feature并切换</span><br><span class="line">git switch main             &#x2F;&#x2F;直接切换到分支main</span><br><span class="line">&#x2F;&#x2F; -----------------------------------------------------------------------</span><br><span class="line">git branch                  &#x2F;&#x2F;查看当前分支</span><br><span class="line">git merge  feature          &#x2F;&#x2F; 合并分支feature到当前分支(记得合并前拉取一下)</span><br><span class="line">git branch -d dev           &#x2F;&#x2F; 删除dev分支 -d 强制删除</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 老版本的 git命令 </span><br><span class="line">git checkout -b main        //创建并切换到分支dev</span><br><span class="line">== 如下操作</span><br><span class="line">git branch   feature        //创建分支main</span><br><span class="line">git checkout feature        //切换到分支feature</span><br><span class="line">git checkout branchName origin/main    //拉取远程分支并切换,此时branchName分支对应得远程分支是main</span><br><span class="line">// 版本比较新一定的分支管理命令 </span><br><span class="line">git switch -c feature       //创建分支feature并切换</span><br><span class="line">git switch main             //直接切换到分支main</span><br><span class="line">// -----------------------------------------------------------------------</span><br><span class="line">git branch                  //查看当前分支</span><br><span class="line">git merge  feature          // 合并分支feature到当前分支(记得合并前拉取一下)</span><br><span class="line">git branch -d dev           // 删除dev分支 -d 强制删除</span><br></pre></td></tr></table></figure></p></li>
 <li><p>推送到远程</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git push origin main                               &#x2F;&#x2F;推送分支到远程</span><br><span class="line">git checkout -b feature origin&#x2F;feature                     &#x2F;&#x2F;创建远程origin的dev分支到本地</span><br><span class="line">git pull                                           &#x2F;&#x2F;拉取远程分支内容</span><br><span class="line">git branch --set-upstream-to&#x3D;origin&#x2F;main main        &#x2F;&#x2F;指定本地与远程dev的链接</span><br><span class="line">&#x2F;&#x2F; 另一种合并操作，相比merge不会产生一次额外的提交</span><br><span class="line">git rebase                                         &#x2F;&#x2F;把本地未push的分叉提交历史整理成直线</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git push origin main                               //推送分支到远程</span><br><span class="line">git checkout -b feature origin/feature                     //创建远程origin的dev分支到本地</span><br><span class="line">git pull                                           //拉取远程分支内容</span><br><span class="line">git branch --set-upstream-to=origin/main main        //指定本地与远程dev的链接</span><br><span class="line">// 另一种合并操作，相比merge不会产生一次额外的提交</span><br><span class="line">git rebase                                         //把本地未push的分叉提交历史整理成直线</span><br></pre></td></tr></table></figure></p></li>
 </ul>
 
     </div>
@@ -394,8 +394,6 @@ alt="git commit" /></li>
       <i class="fa fa-heart"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">RanBun</span>
-  </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>

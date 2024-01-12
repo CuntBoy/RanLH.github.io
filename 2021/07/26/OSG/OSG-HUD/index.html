@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">28</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">55</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">30</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">57</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -169,7 +169,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -303,28 +303,28 @@
 <h3 id="创建相机节点">1、创建相机节点</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">osg::ref_ptr&lt;osg::Camera&gt; hud_camera = <span class="keyword">new</span> osg::Camera;   <span class="comment">// 创建相机的节点</span></span><br><span class="line">osg::ref_ptr&lt;osg::Geometry&gt; geom = <span class="keyword">new</span> osg::Geometry;      <span class="comment">// 创建绘制的节点(也可以是文字)</span></span><br></pre></td></tr></table></figure>
 <h3 id="设置投影矩阵">2、设置投影矩阵</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;setProjectionMatrixAsOrtho2D(<span class="number">-3</span>, <span class="number">4</span>, <span class="number">-3</span>, <span class="number">4</span>, <span class="number">-1.0</span>, <span class="number">100</span>);  <span class="comment">// 2D 也可以 此处设置表示你裁剪的三维空间的实际的能表示的数值的大小</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;<span class="built_in">setProjectionMatrixAsOrtho2D</span>(<span class="number">-3</span>, <span class="number">4</span>, <span class="number">-3</span>, <span class="number">4</span>, <span class="number">-1.0</span>, <span class="number">100</span>);  <span class="comment">// 2D 也可以 此处设置表示你裁剪的三维空间的实际的能表示的数值的大小</span></span><br></pre></td></tr></table></figure>
 <h3 id="设置视口大小viewport">3、设置视口大小(ViewPort)</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// void setViewport(osg::Viewport* viewport);</span></span><br><span class="line"><span class="comment">// void setViewport(int x,int y,int width,int height);</span></span><br><span class="line">hud_camera-&gt;setviewport();  <span class="comment">// 两种方式都是可以的 </span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// void setViewport(osg::Viewport* viewport);</span></span><br><span class="line"><span class="comment">// void setViewport(int x,int y,int width,int height);</span></span><br><span class="line">hud_camera-&gt;<span class="built_in">setviewport</span>();  <span class="comment">// 两种方式都是可以的 </span></span><br></pre></td></tr></table></figure>
 <h3 id="设置渲染的顺序">4、设置渲染的顺序</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;setRenderOrder(osg::Camera::POST_RENDER);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;<span class="built_in">setRenderOrder</span>(osg::Camera::POST_RENDER);</span><br></pre></td></tr></table></figure>
 <h3 id="设置参考帧">5、设置参考帧</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;setReferenceFrame(osg::Transform::ABSOLUTE_RF);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;<span class="built_in">setReferenceFrame</span>(osg::Transform::ABSOLUTE_RF);</span><br></pre></td></tr></table></figure>
 <h3 id="设置不受父节点的影响">6、设置不受父节点的影响</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;setViewMatrix(osg::Matrix::identity());</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;<span class="built_in">setViewMatrix</span>(osg::Matrix::<span class="built_in">identity</span>());</span><br></pre></td></tr></table></figure>
 <h3 id="设置不获取焦点">7、设置不获取焦点</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;setAllowEventFocus(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hud_camera-&gt;<span class="built_in">setAllowEventFocus</span>(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="设置节点的更新回调">8、设置节点的更新回调</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// void setUpdateCallback(Callback* nc);</span></span><br><span class="line"><span class="comment">// 需要重写一个节点的更新回调 修改节点的视图矩阵 </span></span><br><span class="line"><span class="comment">// 设置相机的三个参数  </span></span><br><span class="line"><span class="comment">// 视点 相机的位置 相机的向上方向</span></span><br><span class="line">hud_camera-&gt;setUpdateCallback();</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// void setUpdateCallback(Callback* nc);</span></span><br><span class="line"><span class="comment">// 需要重写一个节点的更新回调 修改节点的视图矩阵 </span></span><br><span class="line"><span class="comment">// 设置相机的三个参数  </span></span><br><span class="line"><span class="comment">// 视点 相机的位置 相机的向上方向</span></span><br><span class="line">hud_camera-&gt;<span class="built_in">setUpdateCallback</span>();</span><br></pre></td></tr></table></figure>
 <h2 id="挂载节点">挂载节点</h2>
 <h3 id="将前面创建的几何节点挂载到-相机上">1、将前面创建的几何节点挂载到
 相机上</h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">osg::ref_ptr&lt;osg::Geode&gt; node = <span class="keyword">new</span> osg::Geode;</span><br><span class="line">node-&gt;addChild(geom.get());</span><br><span class="line">hud_camera-&gt;addChild(node.get());</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">osg::ref_ptr&lt;osg::Geode&gt; node = <span class="keyword">new</span> osg::Geode;</span><br><span class="line">node-&gt;<span class="built_in">addChild</span>(geom.<span class="built_in">get</span>());</span><br><span class="line">hud_camera-&gt;<span class="built_in">addChild</span>(node.<span class="built_in">get</span>());</span><br></pre></td></tr></table></figure>
 <h3 id="设置节点的属性">2、设置节点的属性</h3>
 <ul>
 <li>关闭光照 深度测试 &amp; 打开混溶</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> states = node-&gt;getOrCreateStateSet();</span><br><span class="line">states-&gt;setMode(GL_LIGHTING, osg::StateAttribute::ON);   <span class="comment">//关闭灯光</span></span><br><span class="line">states-&gt;setMode(GL_DEPTH_TEST, osg::StateAttribute::OFF);<span class="comment">//关闭深度测试</span></span><br><span class="line">states-&gt;setMode(GL_BLEND, osg::StateAttribute::ON);  </span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> states = node-&gt;<span class="built_in">getOrCreateStateSet</span>();</span><br><span class="line">states-&gt;<span class="built_in">setMode</span>(GL_LIGHTING, osg::StateAttribute::ON);   <span class="comment">//关闭灯光</span></span><br><span class="line">states-&gt;<span class="built_in">setMode</span>(GL_DEPTH_TEST, osg::StateAttribute::OFF);<span class="comment">//关闭深度测试</span></span><br><span class="line">states-&gt;<span class="built_in">setMode</span>(GL_BLEND, osg::StateAttribute::ON);  </span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -408,8 +408,6 @@
       <i class="fa fa-heart"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">RanBun</span>
-  </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
